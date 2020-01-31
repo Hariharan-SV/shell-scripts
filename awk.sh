@@ -24,5 +24,8 @@ Sort:
 sort -tFieldSeperator -kx,xn filename
 will sort n th column of file if it is a number, if it is a text donot use n
 
+Find Min and Max
+awk -F 'FieldSeperator' 'BEGIN{a=100}  {if ($x<a) a=$x} END{print a}' filename
+awk -F 'FieldSeperator' 'BEGIN{a=0}  {if ($x>a) a=$x} END{print a}' filename
 
 Any modification made in search and replace or delete will not be stored in original file so send it to the temp file and rename it and reuse it
